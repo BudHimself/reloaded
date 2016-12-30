@@ -1,25 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fhenry <fhenry@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/12/30 21:29:35 by fhenry            #+#    #+#             */
+/*   Updated: 2016/12/30 21:33:03 by fhenry           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
-
-int			ft_recursive_factorial(int nb)
+int		ft_recursive_factorial(int nb)
 {
-	static int		sum;
+	int	f;
 
-	if (sum == 0)
-		sum = nb;
-	else
-		sum *= nb;
-	if (--nb > 1 && nb < 13)
-		ft_recursive_factorial(nb);
-	else if (nb < 1 || nb > 12)
+	if (nb < 0)
 		return (0);
-	return (sum);
-}
-
-//prob factorial 1
-
-int			main()
-{
-	printf("%d\n", ft_recursive_factorial(1));
-	return (0);
+	if (nb == 0)
+		return (1);
+	else
+	{
+		f = ft_recursive_factorial(nb - 1);
+		if ((nb * f) / nb != f)
+			return (0);
+		return (nb * f);
+	}
 }

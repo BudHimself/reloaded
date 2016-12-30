@@ -6,12 +6,12 @@
 /*   By: fhenry <fhenry@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/30 18:10:12 by fhenry            #+#    #+#             */
-/*   Updated: 2016/12/30 18:15:12 by fhenry           ###   ########.fr       */
+/*   Updated: 2016/12/30 21:35:40 by fhenry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void		ft_div_mod(int a, int b, int *div, int *mod)
 {
-	*div = a/b;
-	*mod = a%b;
+	*div = a / b;
+	*mod = a % b;
 }
